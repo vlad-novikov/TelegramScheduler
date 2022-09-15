@@ -1,5 +1,5 @@
-const BOT_TOKEN = "SECRET";
-const MY_CHAT_ID = 1234567;
+const BOT_TOKEN = ""; 
+const MY_CHAT_ID = ;
 
 class TelegramBot {
   constructor(token) {
