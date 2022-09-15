@@ -1,22 +1,23 @@
 const SETINGS_SHEET = "настройка";
-const TOKEN_RANGE = "B1";
-const BOTID_RANGE = "B2";
+const BOT_TOKEN_RANGE = "B1";
+const CHAT_ID_RANGE = "B2";
 const SHEET = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(SETINGS_SHEET);
 class Settings {
-  constructor(token, botid) {
-    this.token = token;
-    this.botid = botid;   
+  constructor(bottoken, chatid) {
+    this.bottoken = bottoken;
+    this.chatid = chatid;   
   }
-  getToken() {
-    return this.token;
+  getBotToken() {
+    return this.bottoken;
   }
-  getBotId() {
-    return this.botid;
+  getChatId() {
+    return this.chatid;
   }  
 }
 function getSettings() {
-  let tokenValue = SHEET.getRange(TOKEN_RANGE).getValue();
-  let botidValue = SHEET.getRange(BOTID_RANGE).getValue();
-  let settings = new Settings(tokenValue, botidValue);
+  let tokenValue = SHEET.getRange(BOT_TOKEN_RANGE).getValue();
+  let idValue = SHEET.getRange(CHAT_ID_RANGE).getValue();
+  let settings = new Settings(tokenValue, idValue);
   return settings;  
   }
+  const settings = new Settings(BOT_TOKEN_RANGE,CHAT_ID_RANGE);

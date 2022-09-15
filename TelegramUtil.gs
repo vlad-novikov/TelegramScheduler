@@ -1,5 +1,5 @@
-const BOT_TOKEN = ""; 
-const MY_CHAT_ID = ;
+const BOT_TOKEN = settings.getBotToken; 
+const MY_CHAT_ID = settings.getChatId;
 
 class TelegramBot {
   constructor(token) {
